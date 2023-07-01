@@ -41,7 +41,7 @@ dynamics = {
   \once\override Score.DynamicText.whiteout-style = #'rounded-box
   s2.\crescPoco | s1 |
   s2 s2\sfz | s1 |
-  s1\pp |
+  s1-\tweak X-offset #-0.3 -\pp |
 
 %}
 }

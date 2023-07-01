@@ -30,7 +30,7 @@ dynamics = {
   s2.\ff | s2.*5 |
   s2.\sp |
   s8 s4\pp\cresc s4. | s2.*2 |
-  s2.\fp |
+  s2.-\tweak X-offset #-0.3 -\fp |
   s2.\rall | s2.*2 |
   s2.\atempo | s2.*7 |
   s2.\rall | s2.*4 |
