@@ -6,12 +6,11 @@
   %instrument = "Piano"
   composer = "VinLudens"
   %arranger = "Arr. by VinLudens"
-  tagline = \markup {
-    \with-url #"https://youtube.com/c/VinLudens"
-    \line {
-      "Engraving with Lilypond" $(lilypond-version) \char ##x2014 "https://youtube.com/c/VinLudens"
-    }
-  }
+  tagline = \markup { \center-column {
+    \with-url #"https://youtube.com/@VinLudens"
+    \line { "Engraving with Lilypond" $(lilypond-version) \char ##x2014 "https://youtube.com/@VinLudens" }
+    \line { \small \italic {  September 12 2021  } }
+  } }
 }
 
 #(set-global-staff-size 17.6)
@@ -19,6 +18,8 @@
 
 \paper {
   #(set-paper-size "a4")
+  evenHeaderMarkup = \markup { \if \should-print-page-number { \fill-line { "" \fromproperty #'page:page-number-string } } }
+  oddHeaderMarkup = \evenHeaderMarkup
   % tocItemMarkup = \markup {
   %   \override #'(line-width . 50)
   %   \fill-with-pattern #1 #CENTER .
